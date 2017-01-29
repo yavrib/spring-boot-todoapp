@@ -1,0 +1,11 @@
+<div class="add-state-container">
+<div class="add-state-title-container">
+<p class="add-state-title">Title:</p>
+<input class="add-state-title-form" ng-model="$ctrl.todoListItem.title" type="text">
+</div>
+<div class="add-state-description-container">
+<p class="add-state-description">Description:</p>
+<input class="add-state-description-form" ng-model="$ctrl.todoListItem.description" type="text">
+</div>
+<button class="btn btn-primary add-submit" ng-click="$ctrl.createTodoListItem($ctrl.todoListItem)">Submit</button>
+</div>

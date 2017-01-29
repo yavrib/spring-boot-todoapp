@@ -1,0 +1,102 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  margin-left: 50px;
+  padding: 0;
+}
+.home-container{
+  margin-top: 50px;
+}
+.home-item-list{
+  list-style-type: none;
+  margin-left: -65px;
+}
+.checkbox{
+  display: inline;
+  height: 32px;
+  width: 32px;
+  margin-top: 0px!important;
+  margin-bottom: 20px!important;
+}
+.home-item-list-container{
+  display: inline-block;
+  border: 1px solid black;
+  padding: 5px;
+  height: 70px;
+}
+.home-item-list-detail{
+  display: block;
+}
+.home-edit{
+  display: inline-block;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.home-delete{
+  display: inline-block;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.home-item-title{
+  font-size: 20px;
+}
+.home-item-description{
+  font-size: 16px;
+}
+.home-add{
+
+}
+.add-state-container{
+
+}
+.add-state-title-container{
+
+}
+.add-state-title{
+  display: inline-block;
+  width: 100px;
+}
+.add-state-title-form{
+  width: 300px;
+}
+.add-state-description-container{
+
+}
+.add-state-description{
+  display: inline-block;
+  width: 100px;
+}
+.add-state-description-form{
+  width: 300px;
+}
+.add-submit{
+
+}
+.edit-state-container{
+
+}
+.edit-state-title-container{
+
+}
+.edit-state-title{
+  display: inline-block;
+  width: 100px;
+}
+.edit-state-title-form{
+  width: 300px;
+}
+.edit-state-description-container{
+
+}
+.edit-state-description{
+  display: inline-block;
+  width: 100px;
+}
+.edit-state-description-form{
+  width: 300px;
+}
+.edit-submit{
+
+}

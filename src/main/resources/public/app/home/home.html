@@ -1,0 +1,16 @@
+<div class="home-container">
+  <ul class="home-item-list" ng-repeat="item in $ctrl.todoList">
+    <!--div class="checkbox" ng-click="$ctrl.updateStatusOfTodoListItem(item)" >
+      <label ng-value="item.status"></label>
+    </div-->
+    <img class="checkbox" ng-show="item.status" src="/assets/tick.png" ng-click="$ctrl.updateStatusOfTodoListItem(item)">
+    <img class="checkbox" ng-hide="item.status" src="/assets/no_tick.png" ng-click="$ctrl.updateStatusOfTodoListItem(item)">
+    <div class="home-item-list-container">
+      <dd class="home-item-list-detail home-item-title">{{item.title}}</dd>
+      <dd class="home-item-list-detail home-item-description">{{item.description}}</dd>
+    </div>
+    <button class="btn btn-primary home-edit" ng-click="$ctrl.goToEdit(item.id)">Edit</button>
+    <button class="btn btn-danger home-delete" ng-click="$ctrl.deleteTodoListItem(item.id)">Delete</button>
+  </ul>
+  <button class="btn btn-primary home-add" ng-click="$ctrl.goToAdd()">Add Item</button>
+</div>

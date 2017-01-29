@@ -1,0 +1,11 @@
+<div class="edit-state-container">
+<div class="edit-state-title-container">
+<p class="edit-state-title">Title:</p>
+<input class="edit-state-title-form" ng-model="$ctrl.todoListItem.title" type="text">
+</div>
+<div class="edit-state-description-container">
+<p class="edit-state-description">Description:</p>
+<input class="edit-state-description-form" ng-model="$ctrl.todoListItem.description" type="text">
+</div>
+<button class="btn btn-primary edit-submit" ng-click="$ctrl.updateTodoListItem($ctrl.todoListItem)">Submit</button>
+</div>
