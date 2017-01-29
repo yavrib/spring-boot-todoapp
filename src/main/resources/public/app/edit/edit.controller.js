@@ -8,6 +8,7 @@ class EditController {
       "status":false,
       "date":""
     }
+    this.$state = $state;
     this.$stateParams = $stateParams;
   }
 

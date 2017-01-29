@@ -8,6 +8,7 @@ class AddController {
       "status":false,
       "date":""
     }
+    this.$state = $state;
   }
 
   $onInit() {
@@ -17,7 +18,7 @@ class AddController {
     todoListItem.date = Date.now();
     todoListItem.status = false;
     this.TodoList.createTodoListItem(todoListItem).then((response)=>{
-      this.$state.go("home");
+    	this.$state.go('home');
     })
   }
 }
