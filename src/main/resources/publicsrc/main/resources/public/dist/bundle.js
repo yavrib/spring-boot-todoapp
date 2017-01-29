@@ -38771,16 +38771,13 @@
 	  }, {
 	    key: "createTodoListItem",
 	    value: function createTodoListItem(todoListItem) {
+	      var _this = this;
+
 	      todoListItem.date = Date.now();
 	      todoListItem.status = false;
 	      this.TodoList.createTodoListItem(todoListItem).then(function (response) {
-	        goToHome();
+	        _this.$state.go('home');
 	      });
-	    }
-	  }, {
-	    key: "goToHome",
-	    value: function goToHome() {
-	      this.$state.go('home');
 	    }
 	  }]);
 
