@@ -25,12 +25,34 @@ class HomeController {
   }
   deleteTodoListItem(id){
     this.TodoList.deleteTodoListItem(id).then((response)=>{
-      console.log(response.data)
+      this.TodoList.getAllTodoListItems().then((response)=>{
+       this.todoList = response.data
+      })
     })
   }
   updateStatusOfTodoListItem(todoListItem){
     todoListItem.status = !todoListItem.status;
-    this.TodoList.updateStatusOfTodoListItem(todoListItem.id, todoListItem.status)
+    this.TodoList.updateStatusOfTodoListItem(todoListItem.id, todoListItem.status).then((response)=>{
+    	this.TodoList.getAllTodoListItems().then((response)=>{
+    	  this.todoList = response.data
+    	})
+    })
+  }
+  openModal(){
+    this.showModal = true;
+  }
+  closeModal(){
+    this.showModal = false;
+  }
+  createTodoListItem(todoListItem){
+    todoListItem.date = Date.now();
+    todoListItem.status = false;
+    this.TodoList.createTodoListItem(todoListItem).then((response)=>{
+      this.TodoList.getAllTodoListItems().then((response)=>{
+    	  this.todoList = response.data
+          this.closeModal()
+      })
+    })
   }
 }
 

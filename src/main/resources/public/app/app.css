@@ -2,12 +2,42 @@ body{
   margin: 0;
   padding: 0;
 }
+.add-item-modal{
+  z-index: 200;
+  background-color: white;
+  position: absolute;
+  display: block;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: calc(20% - 200px);
+  margin-left: calc(30% - 250px);
+}
+.row{
+  display: flex;
+}
+.column{
+  width: 260px;
+  border: 1px solid black;
+  border-left: 0px;
+  margin-top: -1px;
+  height: 41px;
+  padding: 5px;
+  font-size: 20px;
+}
+.left-hand-side{
+  border-left: 1px solid black;
+}
+.add-modal-button-container{
+  float: right;
+}
 .container{
-  margin-left: 50px;
+  margin-left: 0px;
   padding: 0;
 }
 .home-container{
   margin-top: 50px;
+  margin-left: 150px;
 }
 .home-item-list{
   list-style-type: none;
@@ -31,13 +61,17 @@ body{
 }
 .home-edit{
   display: inline-block;
-  height: 50px;
-  margin-bottom: 20px;
+  height: 40px;
+  width:130px;
+  margin-bottom: 0px;
+  border-radius: 0px;
 }
 .home-delete{
   display: inline-block;
-  height: 50px;
-  margin-bottom: 20px;
+  height: 40px;
+  width:130px;
+  margin-bottom: 0px;
+  border-radius: 0px;
 }
 .home-item-title{
   font-size: 20px;
@@ -72,6 +106,9 @@ body{
   width: 300px;
 }
 .add-submit{
+
+}
+.add-cancel{
 
 }
 .edit-state-container{

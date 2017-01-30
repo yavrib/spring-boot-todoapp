@@ -4,6 +4,7 @@ import 'app.css';
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import ngCookies from 'angular-cookies';
+import uiBootstrap from 'angular-ui-bootstrap';
 
 import AppComponent from './app.component';
 import Home from './home';
@@ -16,6 +17,7 @@ const root = angular
     Home,
     uiRouter,
     ngCookies,
+    uiBootstrap,
     Add,
     Edit,
     TodoList

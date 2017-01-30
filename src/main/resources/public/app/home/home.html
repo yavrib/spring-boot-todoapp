@@ -1,8 +1,19 @@
+<div ng-show="$ctrl.showModal" class="add-item-modal">
+  <div class="add-state-title-container">
+    <p class="add-state-title">Title:</p>
+    <input class="add-state-title-form" ng-model="$ctrl.todoListItem.title" type="text">
+  </div>
+  <div class="add-state-description-container">
+    <p class="add-state-description">Description:</p>
+    <input class="add-state-description-form" ng-model="$ctrl.todoListItem.description" type="text">
+  </div>
+  <div class="add-modal-button-container">
+    <button class="btn btn-primary add-submit" ng-click="$ctrl.createTodoListItem($ctrl.todoListItem)">Submit</button>
+    <button class="btn btn-primary add-cancel" ng-click="$ctrl.closeModal()">Cancel</button>
+  </div>
+</div>
 <div class="home-container">
-  <ul class="home-item-list" ng-repeat="item in $ctrl.todoList">
-    <!--div class="checkbox" ng-click="$ctrl.updateStatusOfTodoListItem(item)" >
-      <label ng-value="item.status"></label>
-    </div-->
+  <!--ul class="home-item-list" ng-repeat="item in $ctrl.todoList">
     <img class="checkbox" ng-show="item.status" src="/assets/tick.png" ng-click="$ctrl.updateStatusOfTodoListItem(item)">
     <img class="checkbox" ng-hide="item.status" src="/assets/no_tick.png" ng-click="$ctrl.updateStatusOfTodoListItem(item)">
     <div class="home-item-list-container">
@@ -11,6 +22,28 @@
     </div>
     <button class="btn btn-primary home-edit" ng-click="$ctrl.goToEdit(item.id)">Edit</button>
     <button class="btn btn-danger home-delete" ng-click="$ctrl.deleteTodoListItem(item.id)">Delete</button>
-  </ul>
-  <button class="btn btn-primary home-add" ng-click="$ctrl.goToAdd()">Add Item</button>
+  </ul-->
+
+  <div class="table">
+      <div class="row">
+        <dd class="column left-hand-side">To-Do List Item Title</dd>
+        <dd class="column">To-Do List Item Description</dd>
+        <dd class="column">To-Do List Item Status</dd>
+        <dd class="column">To-Do List Actions</dd>
+      </div>
+      <div class="row" ng-repeat="item in $ctrl.todoList">
+        <dd class="column left-hand-side">{{item.title}}</dd>
+        <dd class="column">{{item.description}}</dd>
+        <dd class="column">
+          <img class="checkbox" ng-show="item.status" src="/assets/tick.png" ng-click="$ctrl.updateStatusOfTodoListItem(item)">
+          <img class="checkbox" ng-hide="item.status" src="/assets/no_tick.png" ng-click="$ctrl.updateStatusOfTodoListItem(item)">
+        </dd>
+        <button class="btn btn-primary home-edit" ng-click="$ctrl.goToEdit(item.id)">Edit</button>
+    	<button class="btn btn-danger home-delete" ng-click="$ctrl.deleteTodoListItem(item.id)">Delete</button>
+      </div>
+  </div>
+  <!--button class="btn btn-primary home-add" ng-click="$ctrl.goToAdd()">Add Item</button-->
+  <button class="btn btn-primary home-add" ng-click="$ctrl.openModal()">Add Item</button>
 </div>
+
+
