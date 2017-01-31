@@ -9,6 +9,13 @@ class HomeController {
       "status":false,
       "date":""
     }
+    this.todoListItemToBeEdited = {
+      "id":"",
+      "title":"",
+      "description":"",
+      "status":false,
+      "date":""
+    }
     this.$state = $state;
   }
 
@@ -38,7 +45,33 @@ class HomeController {
     	})
     })
   }
+  updateTodoListItem(todoListItem){
+    this.TodoList.updateTodoListItem(todoListItem).then((response)=>{
+      this.TodoList.getAllTodoListItems().then((response)=>{
+        this.todoList = response.data
+        this.closeEditModal()
+      })
+    })
+  }
+  openEditModal(todoListItem){
+    this.todoListItemToBeEdited.id = todoListItem.id;
+    this.todoListItemToBeEdited.title = todoListItem.title;
+    this.todoListItemToBeEdited.description = todoListItem.description;
+    this.todoListItemToBeEdited.status = todoListItem.status;
+    this.todoListItemToBeEdited.date = todoListItem.date;
+    this.showEditModal = true;
+  }
+  closeEditModal(){
+    this.showEditModal = false;
+  }
   openModal(){
+    this.todoListItem = {
+      "id":"",
+      "title":"",
+      "description":"",
+      "status":false,
+      "date":""
+    }
     this.showModal = true;
   }
   closeModal(){

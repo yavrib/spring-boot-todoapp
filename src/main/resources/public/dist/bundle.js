@@ -515,7 +515,7 @@
 
 
 	// module
-	exports.push([module.id, "body{\n  margin: 0;\n  padding: 0;\n}\n.add-item-modal{\n  z-index: 200;\n  background-color: white;\n  position: absolute;\n  display: block;\n  border: 1px solid black;\n  border-radius: 20px;\n  padding: 20px;\n  margin-top: calc(20% - 200px);\n  margin-left: calc(30% - 250px);\n}\n.row{\n  display: flex;\n}\n.column{\n  width: 260px;\n  border: 1px solid black;\n  border-left: 0px;\n  margin-top: -1px;\n  height: 41px;\n  padding: 5px;\n  font-size: 20px;\n}\n.left-hand-side{\n  border-left: 1px solid black;\n}\n.add-modal-button-container{\n  float: right;\n}\n.container{\n  margin-left: 0px;\n  padding: 0;\n}\n.home-container{\n  margin-top: 50px;\n  margin-left: 150px;\n}\n.home-item-list{\n  list-style-type: none;\n  margin-left: -65px;\n}\n.checkbox{\n  display: inline;\n  height: 32px;\n  width: 32px;\n  margin-top: 0px!important;\n  margin-bottom: 20px!important;\n}\n.home-item-list-container{\n  display: inline-block;\n  border: 1px solid black;\n  padding: 5px;\n  height: 70px;\n}\n.home-item-list-detail{\n  display: block;\n}\n.home-edit{\n  display: inline-block;\n  height: 40px;\n  width:130px;\n  margin-bottom: 0px;\n  border-radius: 0px;\n}\n.home-delete{\n  display: inline-block;\n  height: 40px;\n  width:130px;\n  margin-bottom: 0px;\n  border-radius: 0px;\n}\n.home-item-title{\n  font-size: 20px;\n}\n.home-item-description{\n  font-size: 16px;\n}\n.home-add{\n\n}\n.add-state-container{\n\n}\n.add-state-title-container{\n\n}\n.add-state-title{\n  display: inline-block;\n  width: 100px;\n}\n.add-state-title-form{\n  width: 300px;\n}\n.add-state-description-container{\n\n}\n.add-state-description{\n  display: inline-block;\n  width: 100px;\n}\n.add-state-description-form{\n  width: 300px;\n}\n.add-submit{\n\n}\n.add-cancel{\n\n}\n.edit-state-container{\n\n}\n.edit-state-title-container{\n\n}\n.edit-state-title{\n  display: inline-block;\n  width: 100px;\n}\n.edit-state-title-form{\n  width: 300px;\n}\n.edit-state-description-container{\n\n}\n.edit-state-description{\n  display: inline-block;\n  width: 100px;\n}\n.edit-state-description-form{\n  width: 300px;\n}\n.edit-submit{\n\n}\n", ""]);
+	exports.push([module.id, "body{\n  margin: 0;\n  padding: 0;\n}\n.add-item-modal{\n  z-index: 200;\n  background-color: white;\n  position: absolute;\n  display: block;\n  border: 1px solid black;\n  border-radius: 20px;\n  padding: 20px;\n  margin-top: calc(20% - 200px);\n  margin-left: calc(30% - 250px);\n}\n.row{\n  display: flex;\n}\n.column{\n  width: 260px;\n  min-width: 260px!important;\n  max-width: 260px!important;\n  border: 1px solid black;\n  border-left: 0px;\n  margin-top: -1px;\n  height: 41px;\n  padding: 5px;\n  font-size: 16px;\n}\n.left-hand-side{\n  border-left: 1px solid black;\n}\n.add-modal-button-container{\n  float: right;\n}\n.container{\n  margin-left: 0px;\n  padding: 0;\n}\n.home-container{\n  margin-top: 50px;\n  margin-left: 150px;\n}\n.home-item-list{\n  list-style-type: none;\n  margin-left: -65px;\n}\n.checkbox{\n  display: inline;\n  height: 32px;\n  width: 32px;\n  margin-top: 0px!important;\n  margin-bottom: 20px!important;\n}\n.home-item-list-container{\n  display: inline-block;\n  border: 1px solid black;\n  padding: 5px;\n  height: 70px;\n}\n.home-item-list-detail{\n  display: block;\n}\n.home-edit{\n  display: inline-block;\n  height: 40px;\n  width:130px;\n  min-width:130px!important;\n  max-width:130px!important;\n  margin-bottom: 0px;\n  border-radius: 0px;\n}\n.home-delete{\n  display: inline-block;\n  height: 40px;\n  width:130px;\n  min-width:130px!important;\n  max-width:130px!important;\n  margin-bottom: 0px;\n  border-radius: 0px;\n}\n.home-item-title{\n  font-size: 20px;\n}\n.home-item-description{\n  font-size: 16px;\n}\n.home-add{\n\n}\n.add-state-container{\n\n}\n.add-state-title-container{\n\n}\n.add-state-title{\n  display: inline-block;\n  width: 100px;\n}\n.add-state-title-form{\n  width: 300px;\n}\n.add-state-description-container{\n\n}\n.add-state-description{\n  display: inline-block;\n  width: 100px;\n}\n.add-state-description-form{\n  width: 300px;\n}\n.add-submit{\n\n}\n.add-cancel{\n\n}\n.edit-state-container{\n\n}\n.edit-state-title-container{\n\n}\n.edit-state-title{\n  display: inline-block;\n  width: 100px;\n}\n.edit-state-title-form{\n  width: 300px;\n}\n.edit-state-description-container{\n\n}\n.edit-state-description{\n  display: inline-block;\n  width: 100px;\n}\n.edit-state-description-form{\n  width: 300px;\n}\n.edit-submit{\n\n}\n", ""]);
 
 	// exports
 
@@ -46313,7 +46313,7 @@
 /* 24 */
 /***/ function(module, exports) {
 
-	module.exports = "<div ng-show=\"$ctrl.showModal\" class=\"add-item-modal\">\n  <div class=\"add-state-title-container\">\n    <p class=\"add-state-title\">Title:</p>\n    <input class=\"add-state-title-form\" ng-model=\"$ctrl.todoListItem.title\" type=\"text\">\n  </div>\n  <div class=\"add-state-description-container\">\n    <p class=\"add-state-description\">Description:</p>\n    <input class=\"add-state-description-form\" ng-model=\"$ctrl.todoListItem.description\" type=\"text\">\n  </div>\n  <div class=\"add-modal-button-container\">\n    <button class=\"btn btn-primary add-submit\" ng-click=\"$ctrl.createTodoListItem($ctrl.todoListItem)\">Submit</button>\n    <button class=\"btn btn-primary add-cancel\" ng-click=\"$ctrl.closeModal()\">Cancel</button>\n  </div>\n</div>\n<div class=\"home-container\">\n  <!--ul class=\"home-item-list\" ng-repeat=\"item in $ctrl.todoList\">\n    <img class=\"checkbox\" ng-show=\"item.status\" src=\"/assets/tick.png\" ng-click=\"$ctrl.updateStatusOfTodoListItem(item)\">\n    <img class=\"checkbox\" ng-hide=\"item.status\" src=\"/assets/no_tick.png\" ng-click=\"$ctrl.updateStatusOfTodoListItem(item)\">\n    <div class=\"home-item-list-container\">\n      <dd class=\"home-item-list-detail home-item-title\">{{item.title}}</dd>\n      <dd class=\"home-item-list-detail home-item-description\">{{item.description}}</dd>\n    </div>\n    <button class=\"btn btn-primary home-edit\" ng-click=\"$ctrl.goToEdit(item.id)\">Edit</button>\n    <button class=\"btn btn-danger home-delete\" ng-click=\"$ctrl.deleteTodoListItem(item.id)\">Delete</button>\n  </ul-->\n\n  <div class=\"table\">\n      <div class=\"row\">\n        <dd class=\"column left-hand-side\">To-Do List Item Title</dd>\n        <dd class=\"column\">To-Do List Item Description</dd>\n        <dd class=\"column\">To-Do List Item Status</dd>\n        <dd class=\"column\">To-Do List Actions</dd>\n      </div>\n      <div class=\"row\" ng-repeat=\"item in $ctrl.todoList\">\n        <dd class=\"column left-hand-side\">{{item.title}}</dd>\n        <dd class=\"column\">{{item.description}}</dd>\n        <dd class=\"column\">\n          <img class=\"checkbox\" ng-show=\"item.status\" src=\"/assets/tick.png\" ng-click=\"$ctrl.updateStatusOfTodoListItem(item)\">\n          <img class=\"checkbox\" ng-hide=\"item.status\" src=\"/assets/no_tick.png\" ng-click=\"$ctrl.updateStatusOfTodoListItem(item)\">\n        </dd>\n        <button class=\"btn btn-primary home-edit\" ng-click=\"$ctrl.goToEdit(item.id)\">Edit</button>\n    \t<button class=\"btn btn-danger home-delete\" ng-click=\"$ctrl.deleteTodoListItem(item.id)\">Delete</button>\n      </div>\n  </div>\n  <!--button class=\"btn btn-primary home-add\" ng-click=\"$ctrl.goToAdd()\">Add Item</button-->\n  <button class=\"btn btn-primary home-add\" ng-click=\"$ctrl.openModal()\">Add Item</button>\n</div>\n\n\n"
+	module.exports = "<div ng-show=\"$ctrl.showModal\" class=\"add-item-modal\">\n  <div class=\"add-state-title-container\">\n    <p class=\"add-state-title\">Title:</p>\n    <input class=\"add-state-title-form\" ng-model=\"$ctrl.todoListItem.title\" type=\"text\">\n  </div>\n  <div class=\"add-state-description-container\">\n    <p class=\"add-state-description\">Description:</p>\n    <input class=\"add-state-description-form\" ng-model=\"$ctrl.todoListItem.description\" type=\"text\">\n  </div>\n  <div class=\"add-modal-button-container\">\n    <button class=\"btn btn-primary add-submit\" ng-click=\"$ctrl.createTodoListItem($ctrl.todoListItem)\">Submit</button>\n    <button class=\"btn btn-primary add-cancel\" ng-click=\"$ctrl.closeModal()\">Cancel</button>\n  </div>\n</div>\n<div ng-show=\"$ctrl.showEditModal\" class=\"add-item-modal\">\n  <div class=\"add-state-title-container\">\n    <p class=\"add-state-title\">Title:</p>\n    <input class=\"add-state-title-form\" ng-model=\"$ctrl.todoListItemToBeEdited.title\" type=\"text\">\n  </div>\n  <div class=\"add-state-description-container\">\n    <p class=\"add-state-description\">Description:</p>\n    <input class=\"add-state-description-form\" ng-model=\"$ctrl.todoListItemToBeEdited.description\" type=\"text\">\n  </div>\n  <div class=\"add-modal-button-container\">\n    <button class=\"btn btn-primary add-submit\" ng-click=\"$ctrl.updateTodoListItem($ctrl.todoListItemToBeEdited)\">Submit</button>\n    <button class=\"btn btn-primary add-cancel\" ng-click=\"$ctrl.closeEditModal()\">Cancel</button>\n  </div>\n</div>\n<div class=\"home-container\">\n<div class=\"home-container\">\n  <!--ul class=\"home-item-list\" ng-repeat=\"item in $ctrl.todoList\">\n    <img class=\"checkbox\" ng-show=\"item.status\" src=\"/assets/tick.png\" ng-click=\"$ctrl.updateStatusOfTodoListItem(item)\">\n    <img class=\"checkbox\" ng-hide=\"item.status\" src=\"/assets/no_tick.png\" ng-click=\"$ctrl.updateStatusOfTodoListItem(item)\">\n    <div class=\"home-item-list-container\">\n      <dd class=\"home-item-list-detail home-item-title\">{{item.title}}</dd>\n      <dd class=\"home-item-list-detail home-item-description\">{{item.description}}</dd>\n    </div>\n    <button class=\"btn btn-primary home-edit\" ng-click=\"$ctrl.goToEdit(item.id)\">Edit</button>\n    <button class=\"btn btn-danger home-delete\" ng-click=\"$ctrl.deleteTodoListItem(item.id)\">Delete</button>\n  </ul-->\n  <h1>To-Do Web Application</h1>\n  <div class=\"table\">\n      <div class=\"row\">\n        <dd class=\"column left-hand-side\">To-Do List Item Title</dd>\n        <dd class=\"column\">To-Do List Item Description</dd>\n        <dd class=\"column\">To-Do List Item Status</dd>\n        <dd class=\"column\">To-Do List Actions</dd>\n      </div>\n      <div class=\"row\" ng-repeat=\"item in $ctrl.todoList\">\n        <dd class=\"column left-hand-side\">{{item.title}}</dd>\n        <dd class=\"column\">{{item.description}}</dd>\n        <dd class=\"column\">\n          <img class=\"checkbox\" ng-show=\"item.status\" src=\"/assets/tick.png\" ng-click=\"$ctrl.updateStatusOfTodoListItem(item)\">\n          <img class=\"checkbox\" ng-hide=\"item.status\" src=\"/assets/no_tick.png\" ng-click=\"$ctrl.updateStatusOfTodoListItem(item)\">\n        </dd>\n        <button class=\"btn btn-primary home-edit\" ng-click=\"$ctrl.openEditModal(item)\">Edit</button>\n    \t<button class=\"btn btn-danger home-delete\" ng-click=\"$ctrl.deleteTodoListItem(item.id)\">Delete</button>\n      </div>\n  </div>\n  <!--button class=\"btn btn-primary home-add\" ng-click=\"$ctrl.goToAdd()\">Add Item</button-->\n  <button class=\"btn btn-primary home-add\" ng-click=\"$ctrl.openModal()\">Add Item</button>\n</div>\n\n\n"
 
 /***/ },
 /* 25 */
@@ -46336,6 +46336,13 @@
 	    this.todoList = [];
 	    this.TodoList = TodoList;
 	    this.todoListItem = {
+	      "id": "",
+	      "title": "",
+	      "description": "",
+	      "status": false,
+	      "date": ""
+	    };
+	    this.todoListItemToBeEdited = {
 	      "id": "",
 	      "title": "",
 	      "description": "",
@@ -46388,8 +46395,42 @@
 	      });
 	    }
 	  }, {
+	    key: "updateTodoListItem",
+	    value: function updateTodoListItem(todoListItem) {
+	      var _this4 = this;
+
+	      this.TodoList.updateTodoListItem(todoListItem).then(function (response) {
+	        _this4.TodoList.getAllTodoListItems().then(function (response) {
+	          _this4.todoList = response.data;
+	          _this4.closeEditModal();
+	        });
+	      });
+	    }
+	  }, {
+	    key: "openEditModal",
+	    value: function openEditModal(todoListItem) {
+	      this.todoListItemToBeEdited.id = todoListItem.id;
+	      this.todoListItemToBeEdited.title = todoListItem.title;
+	      this.todoListItemToBeEdited.description = todoListItem.description;
+	      this.todoListItemToBeEdited.status = todoListItem.status;
+	      this.todoListItemToBeEdited.date = todoListItem.date;
+	      this.showEditModal = true;
+	    }
+	  }, {
+	    key: "closeEditModal",
+	    value: function closeEditModal() {
+	      this.showEditModal = false;
+	    }
+	  }, {
 	    key: "openModal",
 	    value: function openModal() {
+	      this.todoListItem = {
+	        "id": "",
+	        "title": "",
+	        "description": "",
+	        "status": false,
+	        "date": ""
+	      };
 	      this.showModal = true;
 	    }
 	  }, {
@@ -46400,14 +46441,14 @@
 	  }, {
 	    key: "createTodoListItem",
 	    value: function createTodoListItem(todoListItem) {
-	      var _this4 = this;
+	      var _this5 = this;
 
 	      todoListItem.date = Date.now();
 	      todoListItem.status = false;
 	      this.TodoList.createTodoListItem(todoListItem).then(function (response) {
-	        _this4.TodoList.getAllTodoListItems().then(function (response) {
-	          _this4.todoList = response.data;
-	          _this4.closeModal();
+	        _this5.TodoList.getAllTodoListItems().then(function (response) {
+	          _this5.todoList = response.data;
+	          _this5.closeModal();
 	        });
 	      });
 	    }

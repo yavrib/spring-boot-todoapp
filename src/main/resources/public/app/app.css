@@ -18,12 +18,14 @@ body{
 }
 .column{
   width: 260px;
+  min-width: 260px!important;
+  max-width: 260px!important;
   border: 1px solid black;
   border-left: 0px;
   margin-top: -1px;
   height: 41px;
   padding: 5px;
-  font-size: 20px;
+  font-size: 16px;
 }
 .left-hand-side{
   border-left: 1px solid black;
@@ -63,6 +65,8 @@ body{
   display: inline-block;
   height: 40px;
   width:130px;
+  min-width:130px!important;
+  max-width:130px!important;
   margin-bottom: 0px;
   border-radius: 0px;
 }
@@ -70,6 +74,8 @@ body{
   display: inline-block;
   height: 40px;
   width:130px;
+  min-width:130px!important;
+  max-width:130px!important;
   margin-bottom: 0px;
   border-radius: 0px;
 }
